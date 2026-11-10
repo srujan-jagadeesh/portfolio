@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srujan B A | Full-Stack Developer & Operations Specialist</title>
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- GSAP & Lenis for Smooth Professional Motion -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+<!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">SRUJAN<span class="dot">.BA</span></div>
+        <div class="nav-actions">
+            <button class="terminal-trigger magnetic" onclick="toggleTerminal()">[ ~ Terminal CLI ]</button>
+            <a href="https://github.com/srujan-jagadeesh" target="_blank" class="nav-link magnetic">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/srujanjagadeesh/" target="_blank" class="nav-link magnetic">LinkedIn ↗</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-status">
+            <span class="status-indicator"></span> EX-SWIGGY INSTAMART ASM • FULL-STACK DEVELOPER
+        </div>
+        
+        <h1 class="hero-title">
+            ENGINEERING SYSTEMS <br>
+            THAT <span class="text-gradient">SCALE & EXECUTE.</span>
+        </h1>
+        
+        <p class="hero-sub">
+            Combining high-volume operational leadership (managing <strong>3,000+ daily orders</strong>) 
+            with modern full-stack web development and AI integration.
+        </p>
+
+        <div class="cta-group">
+            <a href="#work" class="btn-primary magnetic">View Projects ↓</a>
+            <button class="btn-secondary magnetic" onclick="toggleTerminal()">Open Terminal 💻</button>
+        </div>
+    </section>
+
+    <!-- Operational Metrics Banner -->
+    <section class="stats-banner">
+        <div class="stat-card magnetic">
+            <h2 class="counter" data-target="3000">0</h2>
+            <p>Daily Orders Managed</p>
+        </div>
+        <div class="stat-card magnetic">
+            <h2 class="counter" data-target="35">0</h2>
+            <p>Ground Team Led</p>
+        </div>
+        <div class="stat-card magnetic">
+            <h2>SQL 50</h2>
+            <p>LeetCode Badge Unlocked</p>
+        </div>
+        <div class="stat-card magnetic">
+            <h2>100%</h2>
+            <p>Open Source & Shipped</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="work" id="work">
+        <div class="section-header">
+            <span class="sub-tag">// PORTFOLIO</span>
+            <h2 class="section-title">FEATURED PROJECTS</h2>
+        </div>
+
+        <div class="card-grid">
+            <!-- Project 1 -->
+            <div class="card glass-card magnetic">
+                <div class="card-badge">Manifest V3 • Gemini API</div>
+                <h3>Srujan Mail AI Tool v1.0</h3>
+                <p>An open-source Chrome Extension that integrates an AI-powered assistant directly into Gmail. Features context-aware thread parsing, custom prompt chips, and secure local storage.</p>
+                <div class="card-tags">
+                    <span>JavaScript</span> <span>DOM MutationObserver</span> <span>Chrome API</span>
+                </div>
+                <div class="card-links">
+                    <a href="https://chromewebstore.google.com/detail/srujan-mail-ai-tool-v10/dfdeigemobfiihhdhpmmeapfenfegdnc?pli=1" target="_blank" class="link-btn">Chrome Web Store ↗</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="card glass-card magnetic">
+                <div class="card-badge">Analytics • SQL</div>
+                <h3>Q-Commerce Inventory Tracker</h3>
+                <p>Automated RTV management and shrinkage control tracking framework. Engineered to optimize FIFO stock flow and eliminate picking discrepancies in high-volume dark stores.</p>
+                <div class="card-tags">
+                    <span>SQL</span> <span>Node.js</span> <span>Workflow Automation</span>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="card glass-card magnetic">
+                <div class="card-badge">Full-Stack Architecture</div>
+                <h3>Web & Digital Solutions Initiative</h3>
+                <p>Custom full-stack web architectures developed for local businesses and creators, featuring responsive design, high-speed performance, and integrated communication touchpoints.</p>
+                <div class="card-tags">
+                    <span>Node.js</span> <span>Express</span> <span>EJS</span> <span>CSS3</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-card glass-card magnetic">
+            <span class="sub-tag">// GET IN TOUCH</span>
+            <h2 class="section-title">LET'S CONNECT</h2>
+            <p class="contact-sub">Open for software engineering roles, technical collaborations, and innovative development projects.</p>
+            
+            <div class="contact-actions">
+                <a href="tel:6364260803" class="btn-primary magnetic">📞 Call: 6364260803</a>
+                <a href="https://wa.me/916364260803" target="_blank" class="btn-whatsapp magnetic">💬 WhatsApp</a>
+                <a href="mailto:srujansrujan128@gmail.com" class="btn-secondary magnetic">✉️ srujansrujan128@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Terminal Modal -->
+    <div id="terminal-modal" class="terminal-modal">
+        <div class="terminal-header">
+            <span class="terminal-title">srujan@system:~$ (Type 'help' for available commands)</span>
+            <button class="close-btn" onclick="toggleTerminal()">✕</button>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+            <p class="term-line"><span class="prompt">visitor@srujan-dev:~$</span> Interactive CLI initialized. Type <span class="cyan">'help'</span> to view commands.</p>
+        </div>
+        <div class="terminal-input-line">
+            <span class="prompt">visitor@srujan-dev:~$</span>
+            <input type="text" id="term-input" autocomplete="off" autofocus>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
